@@ -39,7 +39,6 @@ public class Users {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	@JsonIgnore
 	public String getPassword() {
 		return password;
 	}
@@ -57,7 +56,6 @@ public class Users {
 	}
 
 	private String email;
-	@JsonIgnore
 	private String password;
 	private String role;
 	

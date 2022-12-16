@@ -7,5 +7,6 @@ import com.example.demo.Entity.Applications;
 
 public interface ApplicationsRepository extends JpaRepository<Applications,Integer> {
 	
+	 
 
 }
