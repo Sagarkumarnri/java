@@ -23,8 +23,8 @@ public class Applicant {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	  private int applicantId;
-	 @JsonProperty("applicantName") private String applicantName;
-	 @JsonProperty("applicantGender")private String applicantGender;
+	  @JsonProperty("applicantName") private String applicantName;
+	  @JsonProperty("applicantGender")private String applicantGender;
 	  @OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
 	  @JoinColumn(name="adress_id")
 	  @JsonProperty("applicantAdress")

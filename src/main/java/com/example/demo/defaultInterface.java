@@ -5,5 +5,5 @@ public interface defaultInterface {
 	{
 		System.out.println("here in static");
 	}
-public void print2();
+	void print2();
 }
