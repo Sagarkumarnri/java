@@ -7,6 +7,7 @@ import com.example.demo.Entity.Applicant;
  
 
 public interface ApplicantRepository extends JpaRepository<Applicant,Integer> {
+
 	
 
 }

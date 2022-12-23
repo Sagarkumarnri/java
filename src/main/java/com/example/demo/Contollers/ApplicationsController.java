@@ -42,7 +42,7 @@ public class ApplicationsController {
 	@PutMapping("/updateApplication")
 	public ResponseEntity<Applications> updateApplication(@RequestBody HashMap<String,String>map)
 	{
-		System.out.println( Integer.parseInt(map.get( "id")));
+		System.out.println( map);
 		 Applications ap=applicationRepository.getOne( Integer.parseInt(map.get( "id")));
 		 ap.setStatus( map.get( "status"));
 		 ap.setCategory( map.get("category"));

@@ -22,12 +22,14 @@ public class UserController {
 	
 	@Autowired
 	UserRepository userRepository;
+	@SuppressWarnings("unchecked")
 	@PostMapping("/signup")
-	public ResponseEntity<String >signup(@RequestBody Users user)
+	public ResponseEntity<HashMap<String,String>>signup(@RequestBody Users user)
 	{
 		System.out.println(user.getPassword());
-		userRepository.save( user);
-		return ResponseEntity.ok( "User added");
+		HashMap<String,String> userDetails=new HashMap<String, String>();
+		userDetails.put("userId",Integer.toString(userRepository.save( user).getId()));
+		return (ResponseEntity<HashMap<String, String>>) ResponseEntity.ok();
 	}
 	@SuppressWarnings("deprecation")
 	@GetMapping("/getUserById/{id}")
