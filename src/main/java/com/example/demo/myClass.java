@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import lombok.Data;
+
+@Data
 public class myClass  implements defaultInterface{
 
 	@Override
@@ -8,5 +11,6 @@ public class myClass  implements defaultInterface{
 		System.out.println("here");
 	}
 	;
+	int l=20;
 
 }

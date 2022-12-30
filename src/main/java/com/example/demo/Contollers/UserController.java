@@ -19,13 +19,13 @@ import com.example.demo.User.Repository.UserRepository;
 @RestController
 @CrossOrigin
 public class UserController {
-	
 	@Autowired
 	UserRepository userRepository;
 	@SuppressWarnings("unchecked")
 	@PostMapping("/signup")
 	public ResponseEntity<HashMap<String,String>>signup(@RequestBody Users user)
 	{
+		
 		System.out.println(user.getPassword());
 		HashMap<String,String> userDetails=new HashMap<String, String>();
 		userDetails.put("userId",Integer.toString(userRepository.save( user).getId()));
